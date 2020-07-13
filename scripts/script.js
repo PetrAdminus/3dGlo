@@ -106,4 +106,37 @@ window.addEventListener('DOMContentLoaded', () => {
 
     };
 
+    // data-toggle
+    const toggleImg = () => {
+        const commandPhoto = document.querySelectorAll('.command__photo');
+
+        commandPhoto.forEach((elem) => elem.addEventListener('mouseover', () => {
+            event.target.src = event.target.dataset.img;
+        }));
+
+        commandPhoto.forEach((elem) => elem.addEventListener('mouseout', () => {
+            let res = event.target.src.replace(/a/, '');
+
+            console.log(res);
+
+        }));
+    };
+    toggleImg();
+
+    // Валидация
+    const validation = () => {
+        const calcBlock = document.querySelector('.calc-block'),
+            input = calcBlock.querySelectorAll('input');
+
+        input.forEach((elem) => elem.addEventListener('input', () => {
+            let target = event.target;
+            let reg = /\D/g;
+
+            if (reg.test(target.value)) {
+                target.value = target.value.replace(reg, '');
+            }
+        }));
+
+    };
+    validation();
 });
