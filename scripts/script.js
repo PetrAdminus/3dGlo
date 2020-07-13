@@ -114,12 +114,12 @@ window.addEventListener('DOMContentLoaded', () => {
             event.target.src = event.target.dataset.img;
         }));
 
-        commandPhoto.forEach((elem) => elem.addEventListener('mouseout', () => {
-            let res = event.target.src.replace(/a/, '');
+        // commandPhoto.forEach((elem) => elem.addEventListener('mouseout', () => {
+        //     let res = event.target.src.replace(/a/, '');
 
-            console.log(res);
+        //     console.log(res);
 
-        }));
+        // }));
     };
     toggleImg();
 
